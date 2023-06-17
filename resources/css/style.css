@@ -1,0 +1,275 @@
+
+/* HEADER */
+.header {
+  background-color:  rgba(2, 85, 125);
+  color: white;
+  padding: 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* HERO */
+.hero {
+  margin-top: 90px;
+}
+
+
+.hero_links{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style-type: none;
+  margin: auto;
+  padding: 0px; 
+}
+
+
+.background-benefits{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-icon-container{
+    background-color: white;
+    border-radius: 50%;
+    padding: 10%;
+    height: 100px;
+    width: 100px;
+}
+
+.background-icons::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 85, 125, 0.5); /* Cambia el valor RGBA para definir el color y la opacidad */
+    mix-blend-mode: multiply; /* Cambia el modo de mezcla para ajustar el efecto */
+    z-index: 100;
+  }
+
+  .background-icons .container{
+    position: relative;
+    z-index: 200;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .icon-text{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    max-width: 150px;
+  }
+
+  
+  .about_us{
+    background-color: rgba(2, 85, 125);
+    padding: 5%;
+  }
+
+  .about_us h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .about_us h3{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .about_us p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+
+  .the_most_popular .card{
+    width: 70%;
+  }
+
+  /* cuerpos de los cards de la seccion The Most Popular  */
+  .the_most_popular .card .card-body{
+    display: grid;
+    justify-items: center;
+  }
+
+  .the_most_popular .cards_container , .our_team .cards_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .the_most_popular .card-img-top{
+    border-bottom: 7px solid #D6A000;
+  }
+
+  .our_team{
+    background-color: whitesmoke;
+  }
+
+
+  .our_team h2 , .the_most_popular h2, .about_us h2 , .study_careers h2 {
+    color: rgba(2, 85, 125);
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+
+    width: 75%;
+    padding-bottom:15px ;
+    border-bottom: 4px solid #D6A000;
+  }
+
+  /* punto amarillo de las secciones */
+  .our_team h2::before , .the_most_popular h2::before, .about_us h2::before, .study_careers h2::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #D6A000;
+    border-radius: 50%;
+    margin-right: 10px;
+    left: -32px;
+    top: 14px;
+  }
+
+  .our_team h3, .the_most_popular h3, .about_us h3, .study_careers h3{
+    color: rgba(2, 85, 125);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 80px;
+  }
+
+
+  .our_team .card{
+    width: 25%;
+  }
+
+  .our_team .img_team_container{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 125px;
+    width: 125px;
+    border: 7px solid white;
+  }
+
+  .our_team .img_team_container img , .our_team .img_top_container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .our_team .img_top_container{
+    height: 150px;
+  }
+
+  /* Cuerpo de los cards de las seccion Our Team */
+  .our_team .card .card-body{
+    place-content: center;
+    display: grid;
+    margin-top: -80px;
+  }
+
+  /* boton con fondo blanco y borde amarillo */
+  .our_team .card .btn , .the_most_popular .btn , .study_careers .btn{
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid #D6A000;
+    color: #D6A000;
+  }
+
+  /* boton con fondo amarillo y borde blanco */
+  .our_team .btn, .the_most_popular .card .btn, .about_us .btn{
+    background-color: #D6A000;
+    border-radius: 20px;
+    border: 4px solid white;
+    color: white;
+  }
+
+  /** STUDY CAREERS**/
+  .study_careers .img_container_type_1{
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .study_careers .img_container_type_2{
+    width: 100%;
+    height: 145px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .study_careers .img_container_type_3{
+    width: 100%;
+    height: 145px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .study_careers img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /** FOOTER **/
+  .footer{
+    background-color: rgba(2, 85, 125);
+    padding: 5%;
+  }
+
+  .footer .logo{
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .footer h2{
+    color: #D6A000;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .footer p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .footer .logo_silvera{
+    width: 50%;
+    object-fit: cover;
+  }
+
+
