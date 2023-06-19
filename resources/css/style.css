@@ -29,6 +29,19 @@
 	color: rgba(2, 85, 125);
 }
 
+
+.scroll-header .link {
+	color: rgba(2, 85, 125);
+}
+
+.scroll-header .hero_links a {
+	color: white;
+}
+
+.scroll-header .hero_links a:hover {
+	color: #D6A000;
+}
+
 .header {
 	color: white;
 	display: flex;
@@ -45,6 +58,43 @@
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+@media (max-width:768px) {
+	.header_logo {
+		width: 63px;
+	}
+
+	.hero_links {
+		gap: 10px !important;
+	}
+
+	.header {
+		padding: 15px 10px;
+		gap: 20px;
+	}
+
+	.header_contact_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header_contact_container {
+		text-align: center;
+	}
+
+	.top-bar .container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.social_media {
+		text-align: center;
+	}
+
+
+
 }
 
 /* HERO */
@@ -74,7 +124,6 @@
 }
 
 .hero-video {
-	/* position: absolute; */
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -99,6 +148,10 @@
 	z-index: 200;
 }
 
+.hero_content_movil {
+	display: none;
+}
+
 .hero .card {
 	border-radius: 10px;
 	overflow: hidden;
@@ -117,6 +170,45 @@
 	background-color: lightgrey;
 }
 
+@media (max-width:768px) {
+	.hero_content {
+		display: none;
+	}
+
+	.hero {
+		height: 500px;
+	}
+
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero_content_movil {
+		display: block;
+	}
+
+	.hero_content_movil {
+		position: absolute;
+		top: 50%;
+		left: 4%;
+		/* transform: translate(-50%, -50%); */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 200;
+	}
+
+	.hero_content_movil h2 {
+		font-size: 1.2rem;
+		width: 100%;
+	}
+
+	.hero_content_movil h3 {
+		font-size: 1.7rem;
+		text-align: center;
+	}
+}
 
 
 .background-benefits {
@@ -154,6 +246,7 @@
 	z-index: 100;
 }
 
+/** BENEFITS **/
 .benefits {
 	height: 350px;
 }
@@ -162,7 +255,7 @@
 	position: relative;
 	z-index: 200;
 	display: grid !important;
-	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 	justify-items: center;
 	gap: 20px;
 	place-content: center;
@@ -177,6 +270,16 @@
 	max-width: 150px;
 }
 
+@media (max-width:768px) {
+	.img-icon-container {
+		padding: 15%;
+		height: 80px;
+		width: 80px;
+	}
+}
+
+
+
 /** ABOUT US **/
 .about_us {
 	background-color: rgba(2, 85, 125);
@@ -190,7 +293,7 @@
 }
 
 .img_container_about_us {
-	width: 120%;
+	width: 100%;
 	overflow: hidden;
 	margin: auto;
 	border-radius: 26px;
@@ -212,9 +315,13 @@
 
 .about_us p {
 	color: white;
-	font-size: 1.2rem;
+	font-size: 1.7rem;
 	font-weight: 400;
 	text-align: left;
+}
+
+.about_us .btn_movil {
+	display: none;
 }
 
 @media (max-width:768px) {
@@ -228,6 +335,15 @@
 
 	.about_us p {
 		text-align: center;
+		font-size: 1.2rem;
+	}
+
+	.about_us .btn_desktop {
+		display: none;
+	}
+
+	.about_us .btn_movil {
+		display: block;
 	}
 
 }
@@ -237,6 +353,9 @@
 /** THE MOST POPULAR **/
 .the_most_popular .card {
 	width: 70%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 
@@ -278,13 +397,7 @@
 	}
 
 	.the_most_popular .card {
-		width: 100%;
-	}
-
-	.the_most_popular .card .btn {
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
+		width: 70%;
 	}
 
 	.the_most_popular .card .btn {
@@ -302,8 +415,6 @@
 	}
 
 
-
-
 }
 
 
@@ -312,53 +423,6 @@
 .our_team {
 	background-color: whitesmoke;
 }
-
-
-/*Subrayado de titulos de las secciones*/
-.our_team h2,
-.the_most_popular h2,
-.about_us h2,
-.study_careers h2 {
-	color: rgba(2, 85, 125);
-	font-size: 2rem;
-	text-align: left;
-	font-weight: 600;
-	position: relative;
-
-	width: 75%;
-	padding-bottom: 15px;
-	border-bottom: 4px solid #D6A000;
-
-	max-width: 373px;
-}
-
-/* punto amarillo de las secciones */
-.our_team h2::before,
-.the_most_popular h2::before,
-.about_us h2::before,
-.study_careers h2::before {
-	position: absolute;
-	content: '';
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background-color: #D6A000;
-	border-radius: 50%;
-	margin-right: 10px;
-	left: -32px;
-	top: 14px;
-}
-
-.our_team h3,
-.the_most_popular h3,
-.study_careers h3 {
-	color: rgba(2, 85, 125);
-	font-size: 2.5rem;
-	font-weight: bold;
-	text-align: left;
-	margin-bottom: 80px;
-}
-
 
 .our_team .card {
 	width: 25%;
@@ -413,7 +477,7 @@
 	}
 
 	.our_team .card {
-		width: 100%;
+		width: 70%;
 	}
 
 	.our_team .card .btn {
@@ -454,50 +518,9 @@
 		margin-bottom: 0px;
 	}
 
-
-
-
-
 }
 
-/* boton con fondo blanco y borde amarillo */
-.our_team .card .btn,
-.btn_background_white {
-	background-color: white;
-	border-radius: 20px;
-	border: 2px solid #D6A000;
-	color: #D6A000;
-}
 
-/* boton con fondo amarillo y borde blanco */
-.the_most_popular .card .btn,
-.about_us .btn,
-.btn_background_yellow {
-	background-color: #D6A000;
-	border-radius: 20px;
-	border: 2px solid white;
-	color: white;
-}
-
-.btn_medium {
-	width: 84%;
-	font-size: 14px;
-	font-weight: 600;
-}
-
-.btn_large {
-	width: 36%;
-	font-size: 25px;
-	font-weight: 700;
-	border-radius: 30px;
-}
-
-.btn_view_more {
-	font-size: 22px;
-	font-weight: 400;
-	border-radius: 34px;
-	width: 175px;
-}
 
 /** STUDY CAREERS**/
 .study_careers .img_container_type_1 {
@@ -524,6 +547,13 @@
 	margin-bottom: 25px;
 }
 
+.img_container_type_1:hover img,
+.img_container_type_2:hover img,
+.img_container_type_3:hover img {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
 .study_careers img {
 	object-fit: cover;
 	width: 100%;
@@ -543,105 +573,63 @@
 	font-weight: bold;
 }
 
-/* resposive de la seccion study careers poniendo todos los card de un mismo tamaño*/
+
 @media (max-width:768px) {
-	.study_careers .img_container_type_1 {
-		height: 145px;
+	.careers_container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0px;
+	}
+
+	.careers_sub_container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0px;
+	}
+
+	.study_careers .img_container_type_1,
+	.study_careers .img_container_type_2,
+	.study_careers .img_container_type_3 {
+		width: 100%;
+		height: 300px;
+		border-radius: 10px;
+		overflow: hidden;
+		margin-bottom: 25px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.study_careers .img_container_type_2 {
-		height: 145px;
+		width: 60%;
 	}
 
-	.study_careers .img_container_type_3 {
-		height: 145px;
+	.info_container {
+		inset: 0;
+		left: 20px;
+		top: 115px;
 	}
 
-	.study_careers .info_container {
-		bottom: 0%;
-		left: 0%;
-	}
 
-	.study_careers .info_container h4 {
-		font-size: 1.2rem;
-	}
-
-	.study_careers .info_container h5 {
-		font-size: 1rem;
-	}
-
-	.study_careers .info_container h6 {
-		font-size: 0.8rem;
-	}
-
-	.study_careers .info_container h4,
-	.study_careers .info_container h5,
-	.study_careers .info_container h6 {
-		text-align: center;
-	}
-
-	.study_careers .info_container h4 {
-		margin-bottom: 0px;
-	}
-
-	.study_careers .info_container h5 {
-		margin-bottom: 0px;
-	}
-
-	.study_careers .info_container h6 {
-		margin-bottom: 0px;
-	}
-
-	.study_careers .info_container .btn {
-		margin-bottom: 20px;
-	}
-
-	.study_careers .info_container .btn {
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
-	}
-
-	.study_careers .info_container .btn {
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
-	}
-
-	.study_careers h2 {
-		text-align: center;
-	}
-
-	.study_careers h3 {
-		text-align: center;
-	}
-
-	.study_careers .cards_container {
-		flex-direction: column;
-	}
-
-	.study_careers .card {
-		width: 100%;
-	}
-
-	.study_careers .card .btn {
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
-	}
-
-	.study_careers .card .btn {
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
-	}
 }
 
 /** REVIEWS **/
-.reviews img {
+.reviews_desktop img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+.reviews_desktop h2 {
+	color: white;
+	font-size: 14px;
+}
+
+.reviews_desktop h3 {
+	color: white;
 }
 
 .img_container_reviews {
@@ -650,25 +638,56 @@
 	margin: auto;
 }
 
+.video_container {
+	position: relative;
+	padding: 65px;
+}
+
 .content_container {
 	position: absolute;
 	bottom: 16%;
 	left: 7%;
 	z-index: 200;
+
+	inset: 0;
+	display: flex !important;
+	place-content: center;
+	gap: 105px;
+	justify-content: center;
+	align-items: center;
 }
 
-.reviews h2 {
-	color: white;
-	font-size: 0.6rem;
-	font-weight: bold;
-	text-align: left;
+.reviews_movil {
+	display: none;
 }
 
-.reviews h3 {
-	color: white;
-	font-size: 2rem;
-	font-weight: bold;
-	text-align: left;
+
+@media (max-width:768px) {
+	.reviews_desktop {
+		display: none;
+	}
+
+	.reviews_movil {
+		display: block;
+	}
+
+	.swiper {
+		width: 100% !important;
+	}
+
+	.reviews_movil h2 {
+		color: rgba(2, 85, 125);
+		font-size: 0.7rem;
+		font-weight: 500;
+		text-align: left;
+	}
+
+	.reviews_movil h3 {
+		color: rgba(2, 85, 125);
+		font-size: 1.4rem;
+		font-weight: 600;
+		text-align: left;
+	}
 }
 
 /** FOOTER **/
@@ -694,10 +713,29 @@
 	font-weight: 400;
 }
 
+.qwick_links a {
+	color: white;
+}
+
+.qwick_links a:hover {
+	color: #D6A000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.logo_silvera_container {
+	text-align: right;
+}
+
 .footer .logo_silvera {
 	width: 40%;
 	object-fit: cover;
 }
+
+.form_newsletter {
+	max-width: 217px;
+}
+
 
 .input_newsletter {
 	border-radius: 30px;
@@ -707,8 +745,7 @@
 
 .btn_submit_newsletter {
 	position: absolute;
-	bottom: 2%;
-	left: 61%;
+	right: 0;
 	z-index: 200;
 	height: 35px;
 	width: 90px;
@@ -718,6 +755,49 @@
 .copyrigth_container {
 	border-top: 1px solid #139dd1;
 }
+
+@media (max-width:768px) {
+	.qwick_links {
+		text-align: center;
+	}
+
+	.contact_info {
+		text-align: center;
+	}
+
+	.copyrigth_container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.logo_silvera_container {
+		text-align: center;
+	}
+
+	.footer .logo_silvera {
+		/* width: 100%; */
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.form_newsletter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.newsletter_container {
+		text-align: center;
+	}
+
+	.footer .logo {
+		width: 40%;
+		padding-bottom: 34px;
+	}
+}
+
+/** GENERALS **/
 
 .swiper {
 	width: 300px;
@@ -731,4 +811,142 @@
 .videos_reviews {
 	width: 300px;
 	height: 300px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	background: white;
+	border-radius: 50%;
+	padding: 25px;
+	opacity: 70%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-size: 23px;
+}
+
+.link {
+	color: white;
+}
+
+.link:hover {
+	color: #D6A000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* boton con fondo blanco y borde amarillo */
+.our_team .card .btn,
+.btn_background_white {
+	background-color: white;
+	border-radius: 20px;
+	border: 2px solid #D6A000;
+	color: #D6A000;
+}
+
+/* boton con fondo amarillo y borde blanco */
+.btn_background_yellow {
+	background-color: #D6A000;
+	border-radius: 20px;
+	border: 2px solid white;
+	color: white;
+}
+
+.btn_background_yellow:hover {
+	background-color: white;
+	border-radius: 20px;
+	border: 2px solid #D6A000;
+	color: #D6A000;
+}
+
+.btn_background_white:hover {
+	background-color: #D6A000;
+	border-radius: 20px;
+	border: 2px solid white;
+	color: white;
+}
+
+.btn_medium {
+	width: 84%;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.btn_large {
+	width: 36%;
+	font-size: 25px;
+	font-weight: 700;
+	border-radius: 30px;
+}
+
+.btn_view_more {
+	font-size: 22px;
+	font-weight: 400;
+	border-radius: 34px;
+	width: 175px;
+}
+
+
+/*Subrayado de titulos de las secciones*/
+.our_team h2,
+.the_most_popular h2,
+.about_us h2,
+.study_careers h2 {
+	color: rgba(2, 85, 125);
+	font-size: 2rem;
+	text-align: left;
+	font-weight: 600;
+	position: relative;
+
+	width: 75%;
+	padding-bottom: 15px;
+	border-bottom: 4px solid #D6A000;
+
+	max-width: 373px;
+}
+
+/* punto amarillo de las secciones */
+.our_team h2::before,
+.the_most_popular h2::before,
+.about_us h2::before,
+.study_careers h2::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #D6A000;
+	border-radius: 50%;
+	margin-right: 10px;
+	left: -32px;
+	top: 14px;
+}
+
+.our_team h3,
+.the_most_popular h3,
+.study_careers h3 {
+	color: rgba(2, 85, 125);
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 80px;
+}
+
+@media (max-width:768px) {
+
+	.title_container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center !important;
+	}
+
+	.title_container h2 {
+		text-align: center;
+	}
+
+	.title_container h3 {
+		text-align: center;
+	}
 }
