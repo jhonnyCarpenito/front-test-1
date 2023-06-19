@@ -93,9 +93,9 @@
 		text-align: center;
 	}
 
-
-
 }
+
+
 
 /* HERO */
 .hero {
@@ -192,7 +192,6 @@
 		position: absolute;
 		top: 50%;
 		left: 4%;
-		/* transform: translate(-50%, -50%); */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -211,6 +210,8 @@
 }
 
 
+
+/** BENEFITS **/
 .background-benefits {
 	object-fit: cover;
 	width: 100%;
@@ -246,7 +247,6 @@
 	z-index: 100;
 }
 
-/** BENEFITS **/
 .benefits {
 	height: 350px;
 }
@@ -277,6 +277,7 @@
 		width: 80px;
 	}
 }
+
 
 
 
@@ -350,6 +351,7 @@
 
 
 
+
 /** THE MOST POPULAR **/
 .the_most_popular .card {
 	width: 70%;
@@ -357,7 +359,6 @@
 	border-radius: 15px;
 	overflow: hidden;
 }
-
 
 /* cuerpos de los cards de la seccion The Most Popular  */
 .the_most_popular .card .card-body {
@@ -418,8 +419,9 @@
 }
 
 
-/** OUR TEAM **/
 
+
+/** OUR TEAM **/
 .our_team {
 	background-color: whitesmoke;
 }
@@ -522,6 +524,7 @@
 
 
 
+
 /** STUDY CAREERS**/
 .study_careers .img_container_type_1 {
 	width: 100%;
@@ -616,6 +619,9 @@
 
 }
 
+
+
+
 /** REVIEWS **/
 .reviews_desktop img {
 	object-fit: cover;
@@ -661,7 +667,6 @@
 	display: none;
 }
 
-
 @media (max-width:768px) {
 	.reviews_desktop {
 		display: none;
@@ -689,6 +694,9 @@
 		text-align: left;
 	}
 }
+
+
+
 
 /** FOOTER **/
 .footer {
@@ -797,16 +805,18 @@
 	}
 }
 
-/** GENERALS **/
 
+
+
+/** GENERALS **/
 .swiper {
 	width: 300px;
 	height: 300px;
 }
 
-.swiper-pagination {
+/* .swiper-pagination {
 	position: inherit;
-}
+} */
 
 .videos_reviews {
 	width: 300px;
@@ -886,7 +896,6 @@
 	border-radius: 34px;
 	width: 175px;
 }
-
 
 /*Subrayado de titulos de las secciones*/
 .our_team h2,
