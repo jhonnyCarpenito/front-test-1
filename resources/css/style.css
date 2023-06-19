@@ -1,275 +1,734 @@
-
 /* HEADER */
-.header {
-  background-color:  rgba(2, 85, 125);
-  color: white;
-  padding: 10px;
+.top-bar {
+	background-color: rgba(2, 85, 125);
+	color: white;
+	padding: 10px;
+}
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+.container_header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	transition: all 0.5s ease-in-out;
+}
+
+.scroll-header {
+	background-color: rgba(2, 85, 125);
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+}
+
+.scroll-header .top-bar {
+	background-color: white;
+	color: rgba(2, 85, 125);
+}
+
+.header {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.header_logo {
+	width: 90px;
+}
+
+.header_logo img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 /* HERO */
 .hero {
-  margin-top: 90px;
+	position: relative;
+	max-height: 700px;
+	overflow: hidden;
+	height: 100%;
+}
+
+.hero h2 {
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	width: 75%;
+	padding-bottom: 15px;
+	border-bottom: 4px solid #D6A000;
+}
+
+.hero h3 {
+	color: white;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: justify;
+}
+
+.hero-video {
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero_links {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	list-style-type: none;
+	margin: auto;
+	padding: 0px;
+}
+
+.hero_content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 200;
+}
+
+.hero .card {
+	border-radius: 10px;
+	overflow: hidden;
+	width: 85%;
+}
+
+.hero .card-header {
+	background-color: rgba(2, 85, 125);
+	color: white;
+	border-bottom: #D6A000 solid 5px;
+}
+
+.hero input,
+.hero textarea {
+	border-radius: 17px;
+	background-color: lightgrey;
 }
 
 
-.hero_links{
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  list-style-type: none;
-  margin: auto;
-  padding: 0px; 
+
+.background-benefits {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-position: center top;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img-icon-container {
+	background-color: white;
+	border-radius: 50%;
+	padding: 10%;
+	height: 100px;
+	width: 100px;
+}
+
+.background-blue::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(2, 85, 125, 0.5);
+	/* Cambia el valor RGBA para definir el color y la opacidad */
+	mix-blend-mode: multiply;
+	/* Cambia el modo de mezcla para ajustar el efecto */
+	z-index: 100;
+}
+
+.benefits {
+	height: 350px;
+}
+
+.benefits .container {
+	position: relative;
+	z-index: 200;
+	display: grid !important;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	justify-items: center;
+	gap: 20px;
+	place-content: center;
+	height: 100%;
+}
+
+.icon-text {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	max-width: 150px;
+}
+
+/** ABOUT US **/
+.about_us {
+	background-color: rgba(2, 85, 125);
+	padding: 5%;
+}
+
+.about_us img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.img_container_about_us {
+	width: 120%;
+	overflow: hidden;
+	margin: auto;
+	border-radius: 26px;
+}
+
+.about_us h2 {
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+.about_us h3 {
+	color: white;
+	font-size: 2.2rem;
+	font-weight: 700;
+	text-align: left;
+}
+
+.about_us p {
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-align: left;
+}
+
+@media (max-width:768px) {
+	.about_us h2 {
+		text-align: center;
+	}
+
+	.about_us h3 {
+		text-align: center;
+	}
+
+	.about_us p {
+		text-align: center;
+	}
+
 }
 
 
-.background-benefits{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+
+/** THE MOST POPULAR **/
+.the_most_popular .card {
+	width: 70%;
 }
 
-.icon{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+/* cuerpos de los cards de la seccion The Most Popular  */
+.the_most_popular .card .card-body {
+	display: grid;
+	justify-items: center;
 }
 
-.img-icon-container{
-    background-color: white;
-    border-radius: 50%;
-    padding: 10%;
-    height: 100px;
-    width: 100px;
+.the_most_popular .cards_container,
+.our_team .cards_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }
 
-.background-icons::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(2, 85, 125, 0.5); /* Cambia el valor RGBA para definir el color y la opacidad */
-    mix-blend-mode: multiply; /* Cambia el modo de mezcla para ajustar el efecto */
-    z-index: 100;
-  }
+.the_most_popular .card-img-top {
+	border-bottom: 6px solid rgba(2, 85, 125);
+}
 
-  .background-icons .container{
-    position: relative;
-    z-index: 200;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    justify-items: center;
-    gap: 20px;
-  }
+.the_most_popular .card-body {
+	border-top: 7px solid #D6A000;
+	padding-top: 6px;
+}
 
-  .icon-text{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    max-width: 150px;
-  }
+.the_most_popular .card-title {
+	text-align: center;
+	font-size: medium;
+	font-weight: 500;
+	color: rgba(2, 85, 125);
+	margin-bottom: 25px;
+}
 
-  
-  .about_us{
-    background-color: rgba(2, 85, 125);
-    padding: 5%;
-  }
+@media (max-width:768px) {
+	.the_most_popular .cards_container {
+		flex-direction: column;
+	}
 
-  .about_us h2{
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-  }
+	.the_most_popular .card {
+		width: 100%;
+	}
 
-  .about_us h3{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
+	.the_most_popular .card .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
 
-  .about_us p{
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-  }
+	.the_most_popular .card .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.the_most_popular h2 {
+		text-align: center;
+	}
+
+	.the_most_popular h3 {
+		text-align: center;
+	}
 
 
 
-  .the_most_popular .card{
-    width: 70%;
-  }
 
-  /* cuerpos de los cards de la seccion The Most Popular  */
-  .the_most_popular .card .card-body{
-    display: grid;
-    justify-items: center;
-  }
-
-  .the_most_popular .cards_container , .our_team .cards_container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .the_most_popular .card-img-top{
-    border-bottom: 7px solid #D6A000;
-  }
-
-  .our_team{
-    background-color: whitesmoke;
-  }
+}
 
 
-  .our_team h2 , .the_most_popular h2, .about_us h2 , .study_careers h2 {
-    color: rgba(2, 85, 125);
-    font-size: 2rem;
-    text-align: left;
-    font-weight: bold;
-    position: relative;
+/** OUR TEAM **/
 
-    width: 75%;
-    padding-bottom:15px ;
-    border-bottom: 4px solid #D6A000;
-  }
-
-  /* punto amarillo de las secciones */
-  .our_team h2::before , .the_most_popular h2::before, .about_us h2::before, .study_careers h2::before{
-    position: absolute;
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-color: #D6A000;
-    border-radius: 50%;
-    margin-right: 10px;
-    left: -32px;
-    top: 14px;
-  }
-
-  .our_team h3, .the_most_popular h3, .about_us h3, .study_careers h3{
-    color: rgba(2, 85, 125);
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 80px;
-  }
+.our_team {
+	background-color: whitesmoke;
+}
 
 
-  .our_team .card{
-    width: 25%;
-  }
+/*Subrayado de titulos de las secciones*/
+.our_team h2,
+.the_most_popular h2,
+.about_us h2,
+.study_careers h2 {
+	color: rgba(2, 85, 125);
+	font-size: 2rem;
+	text-align: left;
+	font-weight: 600;
+	position: relative;
 
-  .our_team .img_team_container{
-    border-radius: 50%;
-    overflow: hidden;
-    height: 125px;
-    width: 125px;
-    border: 7px solid white;
-  }
+	width: 75%;
+	padding-bottom: 15px;
+	border-bottom: 4px solid #D6A000;
 
-  .our_team .img_team_container img , .our_team .img_top_container img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
+	max-width: 373px;
+}
 
-  .our_team .img_top_container{
-    height: 150px;
-  }
+/* punto amarillo de las secciones */
+.our_team h2::before,
+.the_most_popular h2::before,
+.about_us h2::before,
+.study_careers h2::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #D6A000;
+	border-radius: 50%;
+	margin-right: 10px;
+	left: -32px;
+	top: 14px;
+}
 
-  /* Cuerpo de los cards de las seccion Our Team */
-  .our_team .card .card-body{
-    place-content: center;
-    display: grid;
-    margin-top: -80px;
-  }
-
-  /* boton con fondo blanco y borde amarillo */
-  .our_team .card .btn , .the_most_popular .btn , .study_careers .btn{
-    background-color: white;
-    border-radius: 20px;
-    border: 5px solid #D6A000;
-    color: #D6A000;
-  }
-
-  /* boton con fondo amarillo y borde blanco */
-  .our_team .btn, .the_most_popular .card .btn, .about_us .btn{
-    background-color: #D6A000;
-    border-radius: 20px;
-    border: 4px solid white;
-    color: white;
-  }
-
-  /** STUDY CAREERS**/
-  .study_careers .img_container_type_1{
-    width: 100%;
-    height: 315px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 25px;
-  }
-
-  .study_careers .img_container_type_2{
-    width: 100%;
-    height: 145px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 25px;
-  }
-
-  .study_careers .img_container_type_3{
-    width: 100%;
-    height: 145px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 25px;
-  }
-
-  .study_careers img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  /** FOOTER **/
-  .footer{
-    background-color: rgba(2, 85, 125);
-    padding: 5%;
-  }
-
-  .footer .logo{
-    width: 40%;
-    object-fit: cover;
-  }
-
-  .footer h2{
-    color: #D6A000;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .footer p{
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .footer .logo_silvera{
-    width: 50%;
-    object-fit: cover;
-  }
+.our_team h3,
+.the_most_popular h3,
+.study_careers h3 {
+	color: rgba(2, 85, 125);
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 80px;
+}
 
 
+.our_team .card {
+	width: 25%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.our_team .card-title {
+	text-align: center;
+	margin: -5px;
+	margin-top: 14px;
+	color: rgba(2, 85, 125);
+}
+
+.our_team .card-text {
+	text-align: center;
+	font-size: larger;
+	font-weight: 500;
+	color: #D6A000;
+	margin-bottom: 27px;
+}
+
+.our_team .img_team_container {
+	border-radius: 50%;
+	overflow: hidden;
+	height: 125px;
+	width: 125px;
+	border: 7px solid white;
+}
+
+.our_team .img_team_container img,
+.our_team .img_top_container img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.our_team .img_top_container {
+	height: 105px;
+}
+
+/* Cuerpo de los cards de las seccion Our Team */
+.our_team .card .card-body {
+	place-content: center;
+	display: grid;
+	margin-top: -80px;
+}
+
+@media (max-width:768px) {
+	.our_team .cards_container {
+		flex-direction: column;
+	}
+
+	.our_team .card {
+		width: 100%;
+	}
+
+	.our_team .card .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.our_team h2 {
+		text-align: center;
+	}
+
+	.our_team h3 {
+		text-align: center;
+	}
+
+	.our_team .card .card-body {
+		margin-top: 0px;
+	}
+
+	.our_team .card .card-body .btn {
+		margin-bottom: 20px;
+	}
+
+	.our_team .card .card-body .card-text {
+		margin-bottom: 0px;
+	}
+
+	.our_team .card .card-body .card-title {
+		margin-bottom: 0px;
+	}
+
+	.our_team .card .card-body .img_team_container {
+		margin-bottom: 0px;
+	}
+
+	.our_team .card .card-body .img_top_container {
+		margin-bottom: 0px;
+	}
+
+
+
+
+
+}
+
+/* boton con fondo blanco y borde amarillo */
+.our_team .card .btn,
+.btn_background_white {
+	background-color: white;
+	border-radius: 20px;
+	border: 2px solid #D6A000;
+	color: #D6A000;
+}
+
+/* boton con fondo amarillo y borde blanco */
+.the_most_popular .card .btn,
+.about_us .btn,
+.btn_background_yellow {
+	background-color: #D6A000;
+	border-radius: 20px;
+	border: 2px solid white;
+	color: white;
+}
+
+.btn_medium {
+	width: 84%;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.btn_large {
+	width: 36%;
+	font-size: 25px;
+	font-weight: 700;
+	border-radius: 30px;
+}
+
+.btn_view_more {
+	font-size: 22px;
+	font-weight: 400;
+	border-radius: 34px;
+	width: 175px;
+}
+
+/** STUDY CAREERS**/
+.study_careers .img_container_type_1 {
+	width: 100%;
+	height: 315px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.study_careers .img_container_type_2 {
+	width: 100%;
+	height: 145px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.study_careers .img_container_type_3 {
+	width: 100%;
+	height: 145px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.study_careers img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.info_container {
+	position: absolute;
+	bottom: 7%;
+	left: 13%;
+	z-index: 200;
+}
+
+.info_container h4 {
+	color: white;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+/* resposive de la seccion study careers poniendo todos los card de un mismo tamaño*/
+@media (max-width:768px) {
+	.study_careers .img_container_type_1 {
+		height: 145px;
+	}
+
+	.study_careers .img_container_type_2 {
+		height: 145px;
+	}
+
+	.study_careers .img_container_type_3 {
+		height: 145px;
+	}
+
+	.study_careers .info_container {
+		bottom: 0%;
+		left: 0%;
+	}
+
+	.study_careers .info_container h4 {
+		font-size: 1.2rem;
+	}
+
+	.study_careers .info_container h5 {
+		font-size: 1rem;
+	}
+
+	.study_careers .info_container h6 {
+		font-size: 0.8rem;
+	}
+
+	.study_careers .info_container h4,
+	.study_careers .info_container h5,
+	.study_careers .info_container h6 {
+		text-align: center;
+	}
+
+	.study_careers .info_container h4 {
+		margin-bottom: 0px;
+	}
+
+	.study_careers .info_container h5 {
+		margin-bottom: 0px;
+	}
+
+	.study_careers .info_container h6 {
+		margin-bottom: 0px;
+	}
+
+	.study_careers .info_container .btn {
+		margin-bottom: 20px;
+	}
+
+	.study_careers .info_container .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.study_careers .info_container .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.study_careers h2 {
+		text-align: center;
+	}
+
+	.study_careers h3 {
+		text-align: center;
+	}
+
+	.study_careers .cards_container {
+		flex-direction: column;
+	}
+
+	.study_careers .card {
+		width: 100%;
+	}
+
+	.study_careers .card .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.study_careers .card .btn {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+/** REVIEWS **/
+.reviews img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.img_container_reviews {
+	width: 80%;
+	overflow: hidden;
+	margin: auto;
+}
+
+.content_container {
+	position: absolute;
+	bottom: 16%;
+	left: 7%;
+	z-index: 200;
+}
+
+.reviews h2 {
+	color: white;
+	font-size: 0.6rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+.reviews h3 {
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+/** FOOTER **/
+.footer {
+	background-color: rgba(2, 85, 125);
+	padding: 5%;
+}
+
+.footer .logo {
+	width: 57%;
+	object-fit: cover;
+}
+
+.footer h2 {
+	color: #D6A000;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.footer p {
+	color: white;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.footer .logo_silvera {
+	width: 40%;
+	object-fit: cover;
+}
+
+.input_newsletter {
+	border-radius: 30px;
+	border: none;
+	height: 35px;
+}
+
+.btn_submit_newsletter {
+	position: absolute;
+	bottom: 2%;
+	left: 61%;
+	z-index: 200;
+	height: 35px;
+	width: 90px;
+	font-weight: 600;
+}
+
+.copyrigth_container {
+	border-top: 1px solid #139dd1;
+}
+
+.swiper {
+	width: 300px;
+	height: 300px;
+}
+
+.swiper-pagination {
+	position: inherit;
+}
+
+.videos_reviews {
+	width: 300px;
+	height: 300px;
+}

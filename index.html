@@ -2,422 +2,617 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="./resources/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-  <title>Hello, world!</title>
+	<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="./resources/css/style.css">
+
+	<title>Universidad</title>
 </head>
 
 <body>
 
-  <!-- top bar -->
-  <div class = "header">
-    <div class="container d-flex justify-content-between">
-    
-      <div>
-        <span class="mr-4">
-          <!-- Icono de telefono -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-          </svg>
-          323 456 789
-        </span>
-  
-        <span>
-          <!-- Icono de correo -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-          </svg>
-          info@email.com
-        </span>
-      </div>
-      
-      <div class="">
+	<!-- hero -->
+	<div class="hero background-blue">
+		<div class="container_header">
 
-        <span>
-          <!-- Icono de Youtube -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-          </svg>
-        </span> 
-        
-        <span class="mx-4">
-          <!-- Icono de Instagram -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-          </svg>
-        </span>
-  
-        <span>
-          <!-- Icono de Facebook -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-          </svg>
-        </span>
+			<!-- top bar -->
+			<div class="top-bar">
+				<div class="container d-flex justify-content-between">
 
-      </div>
+					<div>
+						<span class="mr-4">
+							<!-- Icono de telefono -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-telephone-fill" viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+							</svg>
+							323 456 789
+						</span>
 
-    </div>
-  </div>
+						<span>
+							<!-- Icono de correo -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-envelope-fill" viewBox="0 0 16 16">
+								<path
+									d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+							</svg>
+							info@email.com
+						</span>
+					</div>
 
-  <!-- hero -->
-  <div class="hero">
-    <div class="container mx-auto">
-      <div class="row">
-        <div class="col-6">
-          
-        </div>
-        <div class="col-6">
-          <ul class="hero_links">
-            <li>About Us</li>
-            <li>Courses</li>
-            <li>Team</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <h2>Welcome a the University</h2>
-          <h3>We Are an online platform to make learning</h3>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <h5 class="card-header">Register Now!</h5>
-            <div class="card-body">
-              <form>
-  
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-                </div>
-  
-                <div class="row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
-                  </div>
-                </div>
-  
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-                </div>
-  
-  
-                <div class="row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
-                  </div>
-                </div>
-  
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-  
-                
-  
-  
-              </form>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
+					<div class="">
 
-    </div>
-  </div>
+						<span>
+							<!-- Icono de Youtube -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-youtube" viewBox="0 0 16 16">
+								<path
+									d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+							</svg>
+						</span>
 
-  <!-- the most popular -->
-  <div class="container the_most_popular">
-    <div>
-      <h2>The most popular</h2>
-      <h3>know what we offer you</h3>
-    </div>
+						<span class="mx-4">
+							<!-- Icono de Instagram -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-instagram" viewBox="0 0 16 16">
+								<path
+									d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+							</svg>
+						</span>
 
-    <div class="cards_container">
-        <div class="card">
-          <img class="card-img-top" src="./resources/img/IMAGE CURSO 1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Design for the web with adobe photoshop</h5>
+						<span>
+							<!-- Icono de Facebook -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-facebook" viewBox="0 0 16 16">
+								<path
+									d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+							</svg>
+						</span>
 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img class="card-img-top" src="./resources/img/IMAGE CURSO 2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Design for the web with adobe photoshop</h5>
+					</div>
 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img class="card-img-top" src="./resources/img/IMAGE CURSO 3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Design for the web with adobe photoshop</h5>
+				</div>
+			</div>
 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-       
-        <div class="card">
-          <img class="card-img-top" src="./resources/img/IMAGE CURSO 4.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Design for the web with adobe photoshop</h5>
+			<header class="container header">
+				<div class="header_logo">
+					<!-- logo -->
+					<img class="logo" src="./resources/img/LOGO.png" alt="">
+				</div>
 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div> 
-    </div>
+				<nav>
+					<ul class="hero_links">
+						<li>About Us</li>
+						<li>Courses</li>
+						<li>Team</li>
+						<li>Contact Us</li>
+					</ul>
+				</nav>
+			</header>
 
-    <div class="w-100 d-flex justify-content-center py-5">
-      <button type="button" class="btn btn-warning">View More</button>
-    </div>
-  </div>
+		</div>
+		<video class="hero-video" autoplay loop muted>
+			<source src="./resources/videos/hero-video.mp4" type="video/mp4">
+			<!-- Si deseas, puedes agregar más formatos de video aquí -->
+		</video>
+		<div class="container mx-auto hero_content">
+			<div class="row align-items-center">
+				<div class="col-6">
+					<h2>Welcome a the University</h2>
+					<h3>We Are an online</h3>
+					<h3>platform to make learning</h3>
+					<button type="button" class="btn btn_background_yellow btn_large mt-4">Get Now</button>
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<div class="card">
+						<h5 class="card-header d-flex justify-content-center">Register Now!</h5>
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" id="formGroupExampleInput"
+										placeholder="Name">
+								</div>
 
-  <!-- about us -->
-  <div class="w-100 about_us">
-    <div class="container row mx-auto">
-      <div class="col-6 d-flex flex-column align-items-start ">
-        <h2 class="text-white">About Us</h2>
-        <h3 class="text-white">know everything we do for you</h3>
-        <P>
-          The univerity is a physical place, buldings, laboratories, libraries ... where students and teaches meet. The univerity is also a human-social system, that is, a set of elements that are related and interact with each other.
-        </P>
+								<div class="row">
+									<div class="col">
+										<input type="text" class="form-control" placeholder="Email">
+									</div>
+									<div class="col">
+										<input type="text" class="form-control" placeholder="Phone">
+									</div>
+								</div>
 
-        <button type="button" class="btn">Read More</button>
-      </div>
-      <div class="col-6">
-        <img src="./resources/img/IMAGE ABOUT US.jpg" alt="">
-      </div>
-    </div>
-  </div>
+								<div class="form-group mt-4">
+									<input type="text" class="form-control" id="formGroupExampleInput"
+										placeholder="Subject">
+								</div>
 
-  <!-- benefits -->
-  <div class="background-icons position-relative w-100">
+								<div class="form-group">
+									<textarea class="form-control" rows="3" placeholder="Message"></textarea>
+								</div>
 
-    <img src="/resources/img/BACKGROUND BENEFITS.jpg" class="position-absolute background-benefits">
+							</form>
+							<a href="#" class="btn btn_background_yellow">Send</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-    <div class="container py-5">
-      <div class=" d-flex flex-column align-items-center">
-        <div class="img-icon-container">
-          <img src="./resources/img/ICONO 1.png" alt="" class="icon">
-        </div>
-        <span class="icon-text">Excellent Content</span>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <div class="img-icon-container">
-          <img src="./resources/img/ICONO 2.png" alt="" class="icon">
-        </div>
-        <span class="icon-text">Experts Instructors</span>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <div class="img-icon-container">
-          <img src="./resources/img/ICONO 3.png" alt="" class="icon">
-        </div>
-        <span class="icon-text">The Best Professionals</span>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <div class="img-icon-container">
-          <img src="./resources/img/ICONO 4.png" alt="" class="icon">
-        </div>
-        <span class="icon-text">Countles Courses</span>
-      </div>
-    </div>
-  </div>
+		</div>
+	</div>
 
-  <!-- study careers -->
-  <div class="study_careers">
-    <div class="container">
-      <div>
-        <h2>Study Careers</h2>
-        <h3>Choose the best for you</h3>
-      </div>
-      <div class="row">
-        <div class="col-8">
-          <div class="row">
-            <div class="col-6">
-              <div class="img_container_type_1">
-                <img src="./resources/img/IMAGE  CATEGORY ADMINISTRATION.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="img_container_type_1">
-                <img src="./resources/img/IMAGE  CATEGORY ACCOUNTING.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="img_container_type_3">
-                <img src="./resources/img/IMAGE  CATEGORY ARCHITECTURE.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="img_container_type_2">
-            <img src="./resources/img/IMAGE  CATEGORY MATHEMATICS.jpg" alt="">
-          </div>
-          <div class="img_container_type_2">
-            <img src="./resources/img/IMAGE  CATEGORY PROGRAMMING.jpg" alt="">
-          </div>
-          <div class="img_container_type_2">
-            <img src="./resources/img/IMAGE  CATEGORY BIOLOGY.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="w-100 d-flex justify-content-center py-5">
-        <button type="button" class="btn btn-warning">View More</button>
-      </div>
-    </div>
-  </div>
-    
-  </div>
+	<!-- the most popular -->
+	<div class="container the_most_popular py-5">
+		<div>
+			<h2>The most popular</h2>
+			<h3>know what we offer you</h3>
+		</div>
 
-  <!-- our team -->
-  <div class="w-100 our_team">
-    <div class="container row mx-auto">
-      <div>
-        <h2>Our Team</h2>
-        <h3>Meet the best Professionals</h3>
-      </div>
-  
-      <div class="cards_container">
-        <div class="card">
-            <div class="img_top_container">
-              <img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg" alt="Card image cap">
-            </div>
-          
-            <div class="card-body">
-              <div class="img_team_container">
-                <img src="./resources/img/IMAGE TEAM 1.jpg" alt="">
-              </div>
-              <h5 class="card-title">Jhon Smith</h5>
-              <p class="card-text">Match Teacher</p>
-              <a href="#" class="btn btn-primary">View More</a>
-            </div>
-        </div>
-  
-        <div class="card">
-          <div class="img_top_container">
-            <img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg" alt="Card image cap">
-          </div>
-        
-          <div class="card-body">
-            <div class="img_team_container">
-              <img src="./resources/img/IMAGE TEAM 2.jpg" alt="">
-            </div>
-            <h5 class="card-title">Dave Morgan</h5>
-            <p class="card-text">Match Teacher</p>
-            <a href="#" class="btn btn-primary">View More</a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="img_top_container">
-            <img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg" alt="Card image cap">
-          </div>
-        
-          <div class="card-body">
-            <div class="img_team_container">
-              <img src="./resources/img/IMAGE TEAM 3.jpg" alt="">
-            </div>
-            <h5 class="card-title">Zara Smith</h5>
-            <p class="card-text">Biology Teacher</p>
-            <a href="#" class="btn btn-primary">View More</a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="img_top_container">
-            <img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg" alt="Card image cap">
-          </div>
-        
-          <div class="card-body">
-            <div class="img_team_container">
-              <img src="./resources/img/IMAGE TEAM 4.jpg" alt="">
-            </div>
-            <h5 class="card-title">Jimena Soto</h5>
-            <p class="card-text">Match Teacher</p>
-            <a href="#" class="btn">View More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="cards_container">
+			<div class="card">
+				<img class="card-img-top" src="./resources/img/IMAGE CURSO 1.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Design for the web with adobe photoshop</h5>
+
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<img class="card-img-top" src="./resources/img/IMAGE CURSO 2.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Design for the web with adobe photoshop</h5>
+
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<img class="card-img-top" src="./resources/img/IMAGE CURSO 3.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Design for the web with adobe photoshop</h5>
+
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<img class="card-img-top" src="./resources/img/IMAGE CURSO 4.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Design for the web with adobe photoshop</h5>
+
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="w-100 d-flex justify-content-center pt-5">
+			<button type="button" class="btn btn_background_white btn_view_more">View More</button>
+		</div>
+	</div>
+
+	<!-- about us -->
+	<div class="w-100 about_us">
+		<div class="container row mx-auto">
+			<div class="col-6 d-flex flex-column align-items-start">
+				<h2 class="text-white">About Us</h2>
+				<h3 class="text-white">know everything we do for you</h3>
+				<P class="py-4">
+					The univerity is a physical place, buldings, laboratories, libraries ... where students and teaches
+					meet. The
+					univerity is also a human-social system, that is, a set of elements that are related and interact
+					with each
+					other.
+				</P>
+
+				<button type="button" class="btn px-4">Read More</button>
+			</div>
+			<div class="col-6">
+				<div class="img_container_about_us">
+					<img src="./resources/img/IMAGE ABOUT US.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- benefits -->
+	<div class="background-blue benefits position-relative w-100">
+
+		<img src="/resources/img/BACKGROUND BENEFITS.jpg" class="position-absolute background-benefits">
+
+		<div class="container py-5">
+			<div class=" d-flex flex-column align-items-center">
+				<div class="img-icon-container">
+					<img src="./resources/img/ICONO 1.png" alt="" class="icon">
+				</div>
+				<span class="icon-text">Excellent Content</span>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="img-icon-container">
+					<img src="./resources/img/ICONO 2.png" alt="" class="icon">
+				</div>
+				<span class="icon-text">Experts Instructors</span>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="img-icon-container">
+					<img src="./resources/img/ICONO 3.png" alt="" class="icon">
+				</div>
+				<span class="icon-text">The Best Professionals</span>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="img-icon-container">
+					<img src="./resources/img/ICONO 4.png" alt="" class="icon">
+				</div>
+				<span class="icon-text">Countles Courses</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- study careers -->
+	<div class="study_careers py-5">
+		<div class="container">
+			<div>
+				<h2>Study Careers</h2>
+				<h3>Explore the different careers we offer</h3>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<div class="row">
+						<div class="col-6">
+							<div class="img_container_type_1 position-relative background-blue">
+								<img src="./resources/img/IMAGE  CATEGORY ADMINISTRATION.jpg" alt="">
+								<div class="info_container">
+									<h4>Administration</h4>
+									<button type="button"
+										class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="img_container_type_1 position-relative background-blue">
+								<img src="./resources/img/IMAGE  CATEGORY ACCOUNTING.jpg" alt="">
+								<div class="info_container">
+									<h4>Accounting</h4>
+									<button type="button"
+										class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="img_container_type_3 position-relative background-blue">
+								<img src="./resources/img/IMAGE  CATEGORY ARCHITECTURE.jpg" alt="">
+								<div class="info_container">
+									<h4>Architecture</h4>
+									<button type="button"
+										class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="img_container_type_2 position-relative background-blue">
+						<img src="./resources/img/IMAGE  CATEGORY MATHEMATICS.jpg" alt="">
+						<div class="info_container">
+							<h4>Mathematics</h4>
+							<button type="button" class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+						</div>
+					</div>
+					<div class="img_container_type_2 position-relative background-blue">
+						<img src="./resources/img/IMAGE  CATEGORY PROGRAMMING.jpg" alt="">
+						<div class="info_container">
+							<h4>Programming</h4>
+							<button type="button" class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+						</div>
+					</div>
+					<div class="img_container_type_2 position-relative background-blue">
+						<img src="./resources/img/IMAGE  CATEGORY BIOLOGY.jpg" alt="">
+						<div class="info_container">
+							<h4>Biology</h4>
+							<button type="button" class="btn btn_background_yellow btn_medium mt-3">Explore</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w-100 d-flex justify-content-center pt-5">
+				<button type="button" class="btn btn_background_white btn_view_more">View More</button>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<!-- our team -->
+	<div class="w-100 our_team py-5">
+		<div class="container row mx-auto">
+			<div>
+				<h2>Our Team</h2>
+				<h3>Meet the best Professionals</h3>
+			</div>
+
+			<div class="cards_container">
+				<div class="card">
+					<div class="img_top_container">
+						<img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+							alt="Card image cap">
+					</div>
+
+					<div class="card-body">
+						<div class="img_team_container">
+							<img src="./resources/img/IMAGE TEAM 1.jpg" alt="">
+						</div>
+						<h5 class="card-title">Jhon Smith</h5>
+						<p class="card-text">Match Teacher</p>
+						<a href="#" class="btn btn-primary">Read More</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="img_top_container">
+						<img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+							alt="Card image cap">
+					</div>
+
+					<div class="card-body">
+						<div class="img_team_container">
+							<img src="./resources/img/IMAGE TEAM 2.jpg" alt="">
+						</div>
+						<h5 class="card-title">Dave Morgan</h5>
+						<p class="card-text">Match Teacher</p>
+						<a href="#" class="btn btn-primary">Read More</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="img_top_container">
+						<img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+							alt="Card image cap">
+					</div>
+
+					<div class="card-body">
+						<div class="img_team_container">
+							<img src="./resources/img/IMAGE TEAM 3.jpg" alt="">
+						</div>
+						<h5 class="card-title">Zara Smith</h5>
+						<p class="card-text">Biology Teacher</p>
+						<a href="#" class="btn">Read More</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="img_top_container">
+						<img class="card-img-top" src="./resources/img/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+							alt="Card image cap">
+					</div>
+
+					<div class="card-body">
+						<div class="img_team_container">
+							<img src="./resources/img/IMAGE TEAM 4.jpg" alt="">
+						</div>
+						<h5 class="card-title">Jimena Soto</h5>
+						<p class="card-text">Match Teacher</p>
+						<a href="#" class="btn">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-    <div class="w-100 d-flex justify-content-center py-5">
-      <button type="button" class="btn">View More</button>
-    </div>
-  </div>
+		<div class="w-100 d-flex justify-content-center pt-5">
+			<button type="button" class="btn btn_background_yellow btn_view_more">View More</button>
+		</div>
+	</div>
 
-  <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-3"><img class="logo" src="./resources/img/LOGO.png" alt=""></div>
-        <div class="col-3">
-          <h2>Qwick Links</h2>
-          <p>About Us</p>
-          <p>Courses</p>
-          <p>Team</p>
-          <p>Contact Us</p>
-        </div>
-        <div class="col-3">
-          <h2>Contact Info</h2>
-          <p>123 1456 789</p>
-          <p>info@email.com</p>
-          <p>address, United States</p>
-          <p>Social Media</p>
-        </div>
-        <div class="col-3">
-          <h2>NewsLetter</h2>
-          <p>Receive all out promotions and notifications</p>
-        </div>
-      </div>
-      <div class="row pt-5">
-        <div class="col-8">
-          <p>Copyrigth Univerity. All Rights Reserved</p>
-          <p>This Website Was Desgined And Developed by Josesilvera.com</p>
-        </div>
-        <div class="col-4 text-right">
-          <img class="logo_silvera" src="./resources/img/logo Silvera Enterprises.png" alt="">
-        </div>
-  
-      </div>
-    </div>
-  </div>
+	<!-- Reviews -->
+	<div class="reviews py-5">
+		<div class="container row mx-auto">
+			<div class="img_container_reviews position-relative">
+				<img src="./resources/img/IMAGE  CATEGORY ARCHITECTURE.jpg" alt="">
+				<div class="container content_container d-flex align-items-center w-100">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-center">
+							<h2>VIEW TESTIMONIALS</h2>
+							<h3>FOR US OT VERY</h3>
+							<h3>IMPORTANT TO</h3>
+							<h3>KNOW THE</h3>
+							<h3>OPINIONS OF OUR</h3>
+							<h3>CLIENTS</h3>
+						</div>
+						<!-- Slider main container -->
+						<div class="col-6">
+							<div class="swiper">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<video id="my-video" class="video-js videos_reviews" controls preload="auto"
+											data-setup="{}">
+											<source src="./resources/videos/review-1.mp4" type="video/mp4" />
+											<!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+											<p class="vjs-no-js">
+												To view this video please enable JavaScript, and consider upgrading to a
+												web browser that
+												<a href="https://videojs.com/html5-video-support/"
+													target="_blank">supports
+													HTML5 video</a>
+											</p>
+										</video>
+									</div>
+									<div class="swiper-slide">
+										<video id="my-video" class="video-js videos_reviews" controls preload="auto"
+											data-setup="{}">
+											<source src="./resources/videos/review-1.mp4" type="video/mp4" />
+											<!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+											<p class="vjs-no-js">
+												To view this video please enable JavaScript, and consider upgrading to a
+												web browser that
+												<a href="https://videojs.com/html5-video-support/"
+													target="_blank">supports
+													HTML5 video</a>
+											</p>
+										</video>
+									</div>
+									<div class="swiper-slide">
+										<video id="my-video" class="video-js videos_reviews" controls preload="auto"
+											data-setup="{}">
+											<source src="./resources/videos/review-1.mp4" type="video/mp4" />
+											<!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+											<p class="vjs-no-js">
+												To view this video please enable JavaScript, and consider upgrading to a
+												web browser that
+												<a href="https://videojs.com/html5-video-support/"
+													target="_blank">supports
+													HTML5 video</a>
+											</p>
+										</video>
+									</div>
+									...
+								</div>
+								<!-- If we need pagination -->
+
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-3 d-flex justify-content-center align-items-start"><img class="logo pt-4"
+						src="./resources/img/LOGO.png" alt=""></div>
+				<div class="col-3">
+					<h2>Qwick Links</h2>
+					<p>About Us</p>
+					<p>Courses</p>
+					<p>Team</p>
+					<p>Contact Us</p>
+				</div>
+				<div class="col-3">
+					<h2>Contact Info</h2>
+					<p>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-telephone-fill mr-3" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+						</svg>
+						123 1456 789
+					</p>
+					<p>
+						<!-- Icono de correo -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-envelope-fill mr-3" viewBox="0 0 16 16">
+							<path
+								d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+						</svg>
+						info@email.com
+					</p>
+					<p>
+						<!-- Icono de ubicación -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-geo-alt  mr-3" viewBox="0 0 16 16">
+							<path
+								d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+							<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+						</svg>
+						address, United States
+					</p>
+					<div class="text-white pl-4">
+						<span>
+							<!-- Icono de Facebook -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-facebook" viewBox="0 0 16 16">
+								<path
+									d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+							</svg>
+						</span>
+
+						<span class="mx-3">
+							<!-- Icono de Instagram -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-instagram" viewBox="0 0 16 16">
+								<path
+									d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+							</svg>
+						</span>
+
+						<span>
+							<!-- Icono de Youtube -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-youtube" viewBox="0 0 16 16">
+								<path
+									d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="col-3">
+					<h2>NewsLetter</h2>
+					<p>Receive all out promotions and notifications</p>
+
+					<form class="position-relative">
+						<input class="input_newsletter" type="text">
+						<button type="button" class="btn btn_background_yellow btn_submit_newsletter">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="row copyrigth_container pt-2 mt-5 ">
+				<div class="col-8">
+					<p class="my-0">© Copyrigth Univerity. All Rights Reserved</p>
+					<p>This Website Was Desgined And Developed by Josesilvera.com</p>
+				</div>
+				<div class="col-4 text-right">
+					<img class="logo_silvera" src="./resources/img/logo Silvera Enterprises.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+
+	<script src="/resources/js/index.js"></script>
 </body>
 
 </html>
