@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional parameters
         //direction: 'vertical',
         loop: true,
+        controls: true,
 
         // If we need pagination
         pagination: {
@@ -29,10 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.swiper-button-prev',
         },
 
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+
     });
 
     // codigo carousel
