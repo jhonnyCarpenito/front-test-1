@@ -657,20 +657,15 @@
 										</p>
 									</video>
 								</div>
-								...
 							</div>
 							<!-- If we need pagination -->
 							<div class="swiper-pagination"></div>
-
-							<!-- If we need navigation buttons -->
-
 
 							<!-- If we need scrollbar -->
 							<div class="swiper-scrollbar"></div>
 						</div>
 
-
-
+						<!-- If we need navigation buttons -->
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
@@ -709,7 +704,7 @@
 					</div>
 					<div class="swiper-slide">
 						<video id="my-video" class="video-js videos_reviews" controls preload="auto" data-setup="{}">
-							<source src="./resources/videos/review-1.mp4" type="video/mp4" />
+							<source src="./resources/videos/hero-video.mp4" type="video/mp4" />
 							<!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
 							<p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
@@ -731,22 +726,28 @@
 							</p>
 						</video>
 					</div>
-					...
+					<div class="swiper-slide">
+						<video id="my-video" class="video-js videos_reviews" controls preload="auto" data-setup="{}">
+							<source src="./resources/videos/hero-video.mp4" type="video/mp4" />
+							<!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+							<p class="vjs-no-js">
+								To view this video please enable JavaScript, and consider upgrading to a
+								web browser that
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports
+									HTML5 video</a>
+							</p>
+						</video>
+					</div>
 				</div>
 				<!-- If we need pagination -->
-
+				<div class="swiper-pagination"></div>
 
 				<!-- If we need navigation buttons -->
-
-
-				<!-- If we need scrollbar -->
-				<div class="swiper-scrollbar"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
 
-			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 
@@ -893,29 +894,7 @@
 
 	<script src="/resources/js/index.js"></script>
 
-	<script>
-		$('#recipeCarousel').carousel({
-			interval: 10000
-		})
 
-		$('.carousel .carousel-item').each(function () {
-			var minPerSlide = 3;
-			var next = $(this).next();
-			if (!next.length) {
-				next = $(this).siblings(':first');
-			}
-			next.children(':first-child').clone().appendTo($(this));
-
-			for (var i = 0; i < minPerSlide; i++) {
-				next = next.next();
-				if (!next.length) {
-					next = $(this).siblings(':first');
-				}
-
-				next.children(':first-child').clone().appendTo($(this));
-			}
-		});
-	</script>
 </body>
 
 </html>

@@ -712,7 +712,7 @@
 	}
 
 	.swiper {
-		width: 100% !important;
+		width: 299px !important;
 	}
 
 	.reviews_movil h2 {
@@ -727,7 +727,21 @@
 		font-size: 2.5rem;
 		font-weight: bold;
 		text-align: center;
+		margin: 0px;
 	}
+
+	.reviews_movil .video_container {
+
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		padding-left: 4%;
+		padding-right: 3%;
+
+		width: 361px;
+	}
+
+
 }
 
 
@@ -778,7 +792,6 @@
 .form_newsletter {
 	max-width: 217px;
 }
-
 
 .input_newsletter {
 	border-radius: 30px;
@@ -845,13 +858,9 @@
 
 /** GENERALS **/
 .swiper {
-	width: 317px;
+	width: 302px;
 	height: 300px;
 }
-
-/* .swiper-pagination {
-	position: inherit;
-} */
 
 .videos_reviews {
 	width: 300px;
@@ -1014,7 +1023,6 @@
 	.title_container h3 {
 		text-align: center;
 	}
-
 
 }
 
